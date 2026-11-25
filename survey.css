@@ -1,0 +1,194 @@
+
+/* General Page Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #002147;
+}
+
+/* Survey Header */
+.survey-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: #002147;
+    color: white;
+}
+
+.survey-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Survey Banner */
+.survey-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.survey-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 33, 71, 0.55);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner-overlay h2 {
+    font-size: 32px;
+    color: #D4AF37;
+}
+
+/* Progress Indicator */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 25px;
+    background-color: white;
+}
+
+.progress-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #777;
+}
+
+.progress-step span {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    font-weight: bold;
+}
+
+.progress-step.active {
+    color: #002147;
+    font-weight: bold;
+}
+
+.progress-step.active span {
+    background-color: #D4AF37;
+    border-color: #D4AF37;
+    color: #002147;
+}
+
+/* Survey Container */
+.survey-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #002147;
+    border-radius: 10px;
+    padding: 25px;
+    background-color: white;
+}
+
+legend {
+    font-size: 22px;
+    font-weight: bold;
+    color: #002147;
+    padding: 0 10px;
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group > label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Inputs and Selects */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Radio Groups */
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    accent-color: #D4AF37;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus {
+    outline: 2px solid #D4AF37;
+    border-color: #002147;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .survey-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .survey-header h1 {
+        font-size: 20px;
+    }
+
+    .banner-overlay h2 {
+        font-size: 24px;
+    }
+
+    .progress-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
